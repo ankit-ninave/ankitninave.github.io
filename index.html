@@ -1,74 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ankit Ninave | Frontend Developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankit Ninave | Full Stack Developer</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
+      font-family: 'Poppins', sans-serif;
+      background: #fdfcfb;
       color: #333;
+      animation: fadeIn 1s ease-in;
+      scroll-behavior: smooth;
+      line-height: 1.6;
     }
     header {
-      background-color: #333;
+      background: linear-gradient(to right, #2e3a59, #1e2a45);
       color: #fff;
-      padding: 20px;
       text-align: center;
+      padding: 60px 20px;
     }
+    header h1 { font-size: 3rem; }
+    header p { font-size: 1.2rem; opacity: 0.85; margin-top: 10px; }
+    nav {
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 15px;
+      color: #2e3a59;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: #ff5722; }
     section {
-      max-width: 900px;
-      margin: 20px auto;
+      max-width: 960px;
+      margin: 40px auto;
       padding: 0 20px;
     }
     h2 {
-      color: #444;
+      font-size: 2rem;
+      color: #2e3a59;
+      margin-bottom: 10px;
+      border-left: 4px solid #ff5722;
+      padding-left: 10px;
     }
-    .contact a {
-      color: #0066cc;
+    .section-bg {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 10px; }
+    footer {
+      background: #2e3a59;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff5722;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       text-decoration: none;
     }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      margin-top: 40px;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Ankit Ninave</h1>
-    <p>Frontend Developer | Angular Developer</p>
+    <p>Full Stack Developer | Angular, Node.js, </p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I'm a passionate and results-driven software engineer with 3+ years of experience specializing in Angular, HTML, CSS, JavaScript, and TypeScript. I build responsive, scalable, and user-friendly applications.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Project 1:</strong> E-Commerce Angular App – dynamic cart, filters, and payment integration</li>
-      <li><strong>Project 2:</strong> Student Admission System – automated workflows and portal development</li>
-      <li><strong>Project 3:</strong> Healthcare Appointment Platform – telemedicine and scheduling features</li>
-    </ul>
-
-    <h2>Skills</h2>
-    <p>Angular, JavaScript, TypeScript, HTML5, CSS3/SCSS, jQuery, Git, RESTful APIs, VS Code, Figma</p>
-
-    <h2>Certifications</h2>
-    <ul>
-      <li><a href="https://www.sololearn.com/certificates/CT-PFDDM98X" target="_blank">JavaScript Certificate – SoloLearn</a></li>
-      <li><a href="https://www.sololearn.com/certificates/CT-XQQVTBY9" target="_blank">TypeScript Certificate – SoloLearn</a></li>
-    </ul>
-
-    <h2 class="contact">Contact</h2>
-    <p>Email: <a href="mailto:ankitninave1@gmail.com">ankitninave1@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/ankit-ninave-7942bb1a0/" target="_blank">View Profile</a></p>
+  <section id="about" class="section-bg">
+    <h2>01. About Me</h2>
+    <p>I have 3+ years of experience building angular solutions using Angular, NodeJS, , MySQL, MongoDB, and more. I focus on clean, scalable code, strong UI/UX, and team collaboration. Experienced in CI/CD, unit testing, backend APIs, and production deployments.</p>
+    <p>Key technologies: Angular, React, , NodeJS, Express, MongoDB, MySQL, SCSS, Bootstrap, REST APIs, Docker, GCP, Git.</p>
   </section>
+
+  <section id="experience" class="section-bg">
+    <h2>02. Experience</h2>
+    <p><strong>Micropro Software Solutions</strong> — Frontend Developer (Oct 2023 – Present)<br>Developing modular Angular apps and collaborating across teams to deliver efficient UI with backend integration.</p>
+    <p><strong>OSC Professionals</strong> — Frontend Developer (Jan 2021 – Jun 2023)<br>Created 10+ scalable Angular apps, improved UX by 20%, and reduced load times by 30%.</p>
+  </section>
+
+  <section id="projects" class="section-bg">
+    <h2>03. Projects</h2>
+    <ul>
+      <li><strong>ISYNC ERP:</strong> Dynamic school management ERP built with Angular +  + MySQL</li>
+      <li><strong>ODC Tutor App:</strong> Medical calculator app using Angular, gestures, graphs (HammerJS)</li>
+      <li><strong>Prime Services:</strong> Mobile & Web app to track client operations, attendance, HR task flow</li>
+      <li><strong>Green Multifit:</strong> Inventory & warehouse system with logs, sales, and product tracking</li>
+      <li><strong>Sachmaas Academy:</strong> Learning + ERP platform with payments, student tracking, lead gen</li>
+      <li><strong>Grocery CRM:</strong> Billing system with barcode, inventory, purchase/sales dashboard</li>
+      <li><strong>Skyglobe Holidays:</strong> API integration of Rezlive & Hotelbed for hotel bookings</li>
+      <li><strong>Sai Catering CRM:</strong> Food/event CRM with manufacturing + order/event tracking</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section-bg">
+    <h2>04. Contact</h2>
+    <p>If you'd like to connect about new opportunities or collaboration, drop a message!</p>
+    <p>Email: <a href="mailto:ankitninave1@gmail.com">ankitninave1@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ankit-ninave-7942bb1a0" target="_blank">Ankit Ninave</a></p>
+  </section>
+
+  <a href="Ankit_Ninave_Frontend_Developer_Resume_2025.pdf" class="floating-button" download>⬇ Resume</a>
 
   <footer>
     <p>&copy; 2025 Ankit Ninave. All rights reserved.</p>
