@@ -1,0 +1,167 @@
+.contact-section {
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  padding: 5rem 2rem !important;
+  color: #f1f1f1;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0 auto !important;
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin: 5rem 2rem !important;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    .left {
+      text-align: center;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+
+      .lets-talk {
+        font-size: 5rem;
+        color: #40c4ff;
+        margin-bottom: 1rem !important;
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      .tagline {
+        font-size: 1rem;
+        margin-bottom: 0.5rem !important;
+        color: #51c3dd;
+        font-weight: 600;
+        letter-spacing: 1px;
+        animation: fadeInUp 1.2s ease-in-out;
+      }
+
+      .subtext {
+        color: #bbb;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem !important;
+        animation: fadeInUp 1.4s ease-in-out;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+          justify-content: flex-start;
+        }
+
+        a {
+          color: #ccc;
+          transition: transform 0.3s ease, color 0.3s ease;
+
+          &:hover {
+            transform: translateY(-5px) scale(1.2);
+          }
+        }
+
+        i.fab.fa-github:hover {
+          color: #f1c40f;
+        }
+
+        i.fab.fa-linkedin:hover {
+          color: #0077b5;
+        }
+
+        i.fab.fa-instagram:hover {
+          color: #e1306c;
+        }
+        .fa-envelope:hover {
+          color: #640d8a;
+        }
+      }
+    }
+
+    .right {
+      .download-btn {
+        padding: 1rem 2rem !important;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 50px;
+        background: linear-gradient(135deg, #ff4081, #40c4ff);
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        box-shadow: 0 0 20px #40c4ff66;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle, #40c4ff44 10%, transparent 70%);
+          animation: pulse-glow 2s infinite ease-in-out;
+          z-index: -1;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 25px #40c4ff99;
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+
+
+.project-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+}
+.project-card:hover {
+  transform: scale(1.03);
+}
+.card-content {
+  text-align: center;
+}

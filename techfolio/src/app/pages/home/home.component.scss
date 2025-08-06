@@ -1,0 +1,219 @@
+.home {
+  background: #0f0f0f;
+  color: #fff;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    gap: 2rem;
+  }
+
+  .intro {
+    flex: 1;
+    min-width: 50%;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem !important;
+    }
+
+          .highlight {
+        background: linear-gradient(45deg, #ff4081, #40c4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 6.2rem;
+      }
+
+    h2 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+              background: linear-gradient(45deg, #ff4081, #40c4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .tech-tags {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      span {
+        background: #1c1c1c;
+        padding: 0.4rem 0.8rem;
+        border-radius: 5px;
+        font-size: 0.85rem;
+        border: 1px solid #333;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #40c4ff;
+          color: #000;
+        }
+      }
+    }
+  }
+/* Right side: Dev Workflow */
+.workflow-illustration {
+  flex: 1 1 400px;
+  text-align: center;
+  width: 50%;
+}
+
+.dev-center{
+    margin-bottom: 10px !important;
+    top: 40%;
+    position: absolute;
+    left: 65%;
+}
+.dev-label {
+  font-size: 1.1rem;
+  padding: 6px 12px !important;
+  border-radius: 8px;
+}
+
+body {
+  background-color: #000; /* For demo */
+  color: white;
+  font-family: sans-serif;
+}
+
+.workflow-container {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin: 40px auto !important;
+}
+
+.workflow-step {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  border: 2px solid transparent;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 2;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+/* Different colors for each step */
+.workflow-step:nth-child(2) {
+  background: #00bcd4;
+}
+.workflow-step:nth-child(3) {
+  background: #4caf50;
+}
+.workflow-step:nth-child(4) {
+  background: #ffc107;
+}
+.workflow-step:nth-child(5) {
+  background: #ff5722;
+}
+.workflow-step:nth-child(6) {
+  background: #9c27b0;
+}
+
+/* Glow on hover */
+.workflow-step:hover {
+  box-shadow: 0 0 18px 6px rgba(0, 255, 255, 0.5), 0 0 10px white;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Rotating line animation */
+.rotating-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: spinGlow 10s linear infinite;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.rotating-line::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: cyan;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px cyan;
+}
+
+/* Rotating animation */
+@keyframes spinGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .workflow-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .intro h1,
+  .intro h2,
+  .highlight {
+    font-size: 1.5rem;
+  }
+
+  .workflow-step {
+    font-size: 12px;
+    padding: 5px 10px !important;
+  }
+}
+}
+
+
+
+
+.home[_ngcontent-ng-c1744210286]   .dev-label[_ngcontent-ng-c1744210286] {
+    /* color: #00ffff; */
+    font-size: 1.1rem;
+    /* font-weight: 600; */
+    /* background-color: rgba(0, 255, 255, 0.1); */
+    padding: 6px 12px !important;
+    /* border: 1px solid cyan; */
+    border-radius: 8px;
+}

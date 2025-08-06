@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="container">
+    <div class="logo"style="cursor: pointer;">
+      <a href="#home">AN</a>
+      </div>
+
+<nav class="nav" [class.active]="menuOpen">
+  <a href="#home" (click)="closeMenu()">Home</a>
+  <a href="#projects" (click)="closeMenu()">Projects</a>
+  <a href="#about" (click)="closeMenu()">About</a>
+  <a href="#contact" (click)="closeMenu()">Contact</a>
+</nav>
+
+
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</header>

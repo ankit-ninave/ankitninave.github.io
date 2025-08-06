@@ -1,0 +1,82 @@
+.skills-section {
+  background: linear-gradient(to right, #121212, #1f1f1f);
+  padding: 4rem 2rem !important;
+//   border-radius: 16px;
+  text-align: center;
+  color: #fff;
+
+  .section-title {
+    font-size: 2.8rem;
+    background: linear-gradient(45deg, #ff4081, #40c4ff, #7e57c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .skills-description {
+    max-width: 700px;
+    margin: 0 auto 3rem auto !important;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+  }
+
+  .tech-badges {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .badge {
+      background: #1e1e1e;
+      border-radius: 50%;
+      padding: 1.5rem;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      cursor: default;
+
+      &:hover {
+        transform: rotate(5deg) scale(1.1);
+        box-shadow: 0 0 25px rgba(64, 196, 255, 0.4);
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0.5rem !important;
+      }
+
+      span {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      &.html {
+        border: 2px solid #e34f26;
+      }
+
+      &.css {
+        border: 2px solid #1572b6;
+      }
+
+      &.js {
+        border: 2px solid #f7df1e;
+      }
+
+       &.ts {
+        border: 2px solid #5f1ef7;
+      }
+
+       &.angular {
+        border: 2px solid rgb(245, 35, 35);
+      }
+    }
+  }
+}

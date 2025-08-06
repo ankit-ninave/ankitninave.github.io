@@ -1,0 +1,123 @@
+.header {
+  background: linear-gradient(135deg, #000000, #1c1c1c);
+  color: white;
+  padding: 0.5rem 1rem !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto !important;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.8rem;
+    user-select: none;
+    background: linear-gradient(45deg, #ff4081, #40c4ff, #7e57c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 5s infinite linear;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      cursor: pointer;
+
+      &.active::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #40c4ff;
+        bottom: -4px;
+        left: 0;
+        border-radius: 2px;
+      }
+
+      &:hover {
+        opacity: 0.85;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.95);
+        color: #ff4081;
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    &:active {
+      transform: rotate(10deg) scale(0.95);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .nav {
+      position: fixed;
+      top: 56px;
+      right: 0;
+      background: linear-gradient(135deg, #000000, #1c1c1c);
+      flex-direction: column;
+      width: 200px;
+      padding: 1rem;
+      gap: 1rem;
+      height: calc(100vh - 56px);
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+
+      &.active {
+        transform: translateX(0);
+      }
+
+      a {
+        font-size: 1.2rem;
+      }
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
